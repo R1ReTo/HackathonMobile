@@ -1,0 +1,7 @@
+{
+  "name": "HackathonMobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
