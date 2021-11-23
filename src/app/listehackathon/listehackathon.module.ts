@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ListeHackathonPageRoutingModule } from './liste-hackathon-routing.module';
+import { ListehackathonPageRoutingModule } from './listehackathon-routing.module';
 
-import { ListeHackathonPage } from './liste-hackathon.page';
+import { ListehackathonPage } from './listehackathon.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ListeHackathonPageRoutingModule
+    ListehackathonPageRoutingModule
   ],
-  declarations: [ListeHackathonPage]
+  declarations: [ListehackathonPage]
 })
-export class ListeHackathonPageModule {}
+export class ListehackathonPageModule {}

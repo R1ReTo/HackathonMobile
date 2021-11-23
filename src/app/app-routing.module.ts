@@ -12,9 +12,13 @@ const routes: Routes = [
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {
-    path: 'liste-hackathon',
-    loadChildren: () => import('./liste-hackathon/liste-hackathon.module').then( m => m.ListeHackathonPageModule)
-  }
+    path: 'listehackathon',
+    loadChildren: () => import('./listehackathon/listehackathon.module').then( m => m.ListehackathonPageModule)
+  },
+  {
+    path: 'details',
+    loadChildren: () => import('./details/details.module').then( m => m.DetailsPageModule)
+  },
 ];
 
 @NgModule({
