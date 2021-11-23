@@ -1,12 +1,31 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>details</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Details</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card>
-    <ion-card-title>{{item.theme}}</ion-card-title>
-    <p>{{item.lieu}}</p>
+<ion-content style="text-align:center;">
+  <ion-card style="text-align: center;">
+    <br>
+    <ion-card-title style="font-weight: bold;">{{item.theme}}</ion-card-title><br>
+    <img style="padding-left: 10%; padding-right: 10%;" src="{{item.image}}">
+    <br><br>
+    <ion-item>
+      <li>
+        <ul>Lieu : {{item.lieu}}</ul>
+        <ul>Rue : {{item.rue}}</ul>
+        <ul>Ville : {{item.ville}}</ul>
+        <ul>Code postal : {{item.cp}}</ul>
+        <ul>Date de début : {{item.datedebut | date: 'dd/MM/yyyy'}} à {{item.heuredebut | date: 'hh:mm'}}</ul>
+        <ul>Date limite d'inscription : {{item.datelimite | date: 'dd/MM/yyyy'}}</ul>
+        <ul>Nombre de places restante : {{item.nbplaces}}</ul>
+        <ul>Date de fin : {{item.datefin | date: 'dd/MM/yyyy'}} à {{item.heurefin | date: 'hh:mm'}}</ul>
+        <ul style="margin-left: 13%;"><ion-button color="primary">S'inscrire au hackathon</ion-button></ul>
+      </li>
+    </ion-item>
+    
   </ion-card>
 </ion-content>
