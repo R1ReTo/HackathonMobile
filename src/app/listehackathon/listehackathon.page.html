@@ -1,13 +1,20 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
+<<<<<<< HEAD
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>listehackathon</ion-title>
+=======
+    <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+    <ion-title>Liste des hackathons</ion-title>
+>>>>>>> 3c9c0f989ba35b1c3750e88958b56c9cb59e51d7
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+<<<<<<< HEAD
 
   <ion-title>Ville</ion-title>
   <ion-select placeholder="Select One" (ionChange)="onChange($event)">
@@ -19,5 +26,21 @@
 
   <ion-item *ngFor="let item of ListHackathonAff" (click)="MonClick(item)">
     <p>{{item.theme}}</p>
+=======
+  <ion-item *ngFor="let item of ListHackathon" (click)="MonClick(item)">
+    <ion-card style="text-align: center;">
+      <br><ion-card-title style="font-weight: bold;">{{item.theme}}</ion-card-title><br>
+      <img style="padding-left: 10%; padding-right: 10%;" src="{{item.image}}">
+      <br><br>
+      <ion-item>
+        <li>
+          <ul>Lieu : {{item.lieu}}</ul>
+          <ul>Ville : {{item.ville}}</ul>
+          <ul>Date de début : {{item.datedebut | date: 'dd/MM/yyyy'}} à {{item.heuredebut | date: 'hh:mm:ss'}}</ul>
+          <ul>Nombre de places restante : {{item.nbplaces}}</ul>
+        </li>
+      </ion-item> 
+    </ion-card>
+>>>>>>> 3c9c0f989ba35b1c3750e88958b56c9cb59e51d7
   </ion-item>
 </ion-content>
