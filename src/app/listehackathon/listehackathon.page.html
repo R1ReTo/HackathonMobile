@@ -3,27 +3,18 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>listehackathon</ion-title>
-    <ion-menu-button></ion-menu-button>
-  </ion-buttons>
     <ion-title>Liste des hackathons</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item *ngFor="let item of ListHackathon" (click)="MonClick(item)">
-    <ion-card style="text-align: center;">
-      <br><ion-card-title style="font-weight: bold; font-family: Comic Sans MS;">{{item.theme}}</ion-card-title><br>
-      <img style="padding-left: 10%; padding-right: 10%; " src="{{item.image}}">
-      <br><br>
-      <ion-item style="font-family: Comic Sans MS;">
-        <li>
-          <ul>Lieu : {{item.lieu}}</ul>
-          <ul>Ville : {{item.ville}}</ul>
-          <ul>Date de début : {{item.datedebut | date: 'dd/MM/yyyy'}} à {{item.heuredebut | date: 'hh:mm:ss'}}</ul>
-          <ul>Nombre de places restante : {{item.nbplaces}}</ul>
-        </li>
-      </ion-item> 
+
+  <ion-item *ngFor="let item of ListHackathonAff" (click)="MonClick(item)">
+
+
+    
+    <ion-card>
+      <ion-card-title>{{item.theme}}</ion-card-title>
     </ion-card>
   </ion-item>
 </ion-content>
