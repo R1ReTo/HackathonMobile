@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Connnexion</ion-title>
+    <ion-title style="font-family: Comic Sans MS;">Connnexion</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,24 +11,24 @@
   <form [formGroup]="myForm" (ngSubmit)="onSubmit()" novalidate>
 
     <ion-item lines="full">
-      <ion-label position="floating">Adresse mail</ion-label>
+      <ion-label style="font-family: Comic Sans MS;" position="floating">Adresse mail</ion-label>
       <ion-input formControlName="email" type="email"></ion-input>
     </ion-item>
-    <span class="error ion-padding" *ngIf="submitted && errorCtr.email.errors?.required">
+    <span style="font-family: Comic Sans MS;" class="error ion-padding" *ngIf="submitted && errorCtr.email.errors?.required">
       Adresse mail requise
     </span>
-    <span class="error ion-padding" *ngIf="submitted && errorCtr.email.errors?.pattern">
+    <span style="font-family: Comic Sans MS;" class="error ion-padding" *ngIf="submitted && errorCtr.email.errors?.pattern">
       Adresse mail incorrect
     </span>
 
     <ion-item lines="full">
-      <ion-label position="floating">Mot de passe</ion-label>
+      <ion-label style="font-family: Comic Sans MS;" position="floating">Mot de passe</ion-label>
       <ion-input formControlName="email" type="password"></ion-input>
     </ion-item>
-    <span class="error ion-padding" *ngIf="submitted && errorCtr.email.errors?.required">
+    <span style="font-family: Comic Sans MS;" class="error ion-padding" *ngIf="submitted && errorCtr.email.errors?.required">
       Mot de passe requis
     </span>
-    <span class="error ion-padding" *ngIf="submitted && errorCtr.email.errors?.pattern">
+    <span style="font-family: Comic Sans MS;" class="error ion-padding" *ngIf="submitted && errorCtr.email.errors?.pattern">
       Mot de passe incorrect
     </span>
 
