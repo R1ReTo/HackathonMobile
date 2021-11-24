@@ -1,14 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-    <ion-menu-button></ion-menu-button>
-  </ion-buttons>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>listehackathon</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item *ngFor="let item of ListHackathon" (click)="MonClick(item)">
+
+  <ion-title>Ville</ion-title>
+  <ion-select placeholder="Select One" (ionChange)="onChange($event)">
+    <ion-item *ngFor="let item of listville">
+      <ion-select-option value="{{item}}" >{{item}}</ion-select-option>
+    </ion-item>
+  </ion-select>
+
+
+  <ion-item *ngFor="let item of ListHackathonAff" (click)="MonClick(item)">
     <p>{{item.theme}}</p>
   </ion-item>
 </ion-content>
