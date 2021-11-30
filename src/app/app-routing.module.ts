@@ -24,8 +24,16 @@ const routes: Routes = [
     loadChildren: () => import('./accueil/accueil.module').then( m => m.AccueilPageModule)
   },
   {
-    path: 'connexion',
-    loadChildren: () => import('./connexion/connexion.module').then( m => m.ConnexionPageModule)
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
   }
 ];
 
