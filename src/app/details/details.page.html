@@ -8,10 +8,10 @@
 </ion-header>
 
 <ion-content style="text-align:center;">
-  <ion-card style="text-align: center;">
+  <ion-card name="listeHackathon" style="box-shadow: 1px 1px 10px black;border-radius:20px;font-family: Comic Sans MS;text-align: center; margin-right: 10px;">
     <br>
     <ion-card-title style="font-weight: bold;">{{item.theme}}</ion-card-title><br>
-    <img style="font-family: Comic Sans MS; padding-left: 10%; padding-right: 10%;" src="{{item.image}}">
+    <img style="padding-left: 10%; padding-right: 10%;" src="{{item.image}}">
     <br><br>
     <ion-item style="font-family: Comic Sans MS;">
       <li>
@@ -23,9 +23,8 @@
         <ul>Date limite d'inscription : {{item.datelimite | date: 'dd/MM/yyyy'}}</ul>
         <ul>Nombre de places restante : {{item.nbplaces}}</ul>
         <ul>Date de fin : {{item.datefin | date: 'dd/MM/yyyy'}} à {{item.heurefin | date: 'hh:mm'}}</ul>
-        <ul style="margin-left: 13%;"><ion-button color="primary">S'inscrire au hackathon</ion-button></ul>
+        <ul><ion-button color="primary">S'inscrire au hackathon</ion-button></ul>
       </li>
     </ion-item>
-    
   </ion-card>
 </ion-content>
