@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -8,14 +9,20 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 export class IonicAuthService {
 
   constructor(
-    private angularFireAuth: AngularFireAuth
+    private angularFireAuth: AngularFireAuth,private http : HttpClient
   ) { }  
 
   createUser(value) {
     return new Promise<any>((resolve, reject) => {
       this.angularFireAuth.createUserWithEmailAndPassword(value.email, value.password)
         .then(
-          res => resolve(res),
+          res => {
+            console.log(res);
+            this.http.post("http://localhost:8000/api/participant",value).subscribe((data)=>{
+              resolve(res);
+            })
+            
+          },
           err => reject(err))
     })
   }

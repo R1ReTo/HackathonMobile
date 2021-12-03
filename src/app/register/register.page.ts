@@ -55,6 +55,15 @@ export class RegisterPage implements OnInit {
         Validators.minLength(6),
         Validators.required
       ])),
+      nom: new FormControl('', Validators.compose([
+        Validators.minLength(6),
+        Validators.required
+      ])),
+      prenom : new FormControl('', Validators.compose([
+        Validators.minLength(6),
+        Validators.required
+      ])),
+      
     });
   }
 
