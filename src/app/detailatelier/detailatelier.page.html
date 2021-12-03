@@ -1,9 +1,35 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>detailatelier</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="font-family: Comic Sans MS;">Details</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content style="text-align:center;">
+  <ion-card name="listeHackathon" style="box-shadow: 1px 1px 10px black;border-radius:20px;font-family: Comic Sans MS;text-align: center; margin-right: 10px;">
+    <ion-item>
+      <ion-label>Default Label</ion-label>
+    </ion-item> 
+    <ion-item>
+      <ion-label position="floating">Nom :</ion-label>
+      <ion-input value="custom"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Prenom :</ion-label>
+      <ion-input value="custom"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email :</ion-label>
+      <ion-input value="custom"></ion-input>
+    </ion-item>
+    <ion-card-title style="font-weight: bold;">{{item3.nbplacesinit}}</ion-card-title><br>
+    <br><br>
+    <ion-item style="font-family: Comic Sans MS;">
+      <li>
+        <ul><ion-button color="primary" (click)="MonClick(item)">S'inscrire à l'atelier</ion-button></ul>
+      </li>
+    </ion-item>
+  </ion-card>
 </ion-content>
