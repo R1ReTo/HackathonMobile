@@ -65,7 +65,7 @@ export class LoginPage implements OnInit {
         this.errorMsg = "";
         this.router.navigateByUrl('dashboard');
       }, error => {
-        this.errorMsg = error.message;
+        this.errorMsg = "Login ou mot de passe incorrect";
         this.successMsg = "";
       })
   }
