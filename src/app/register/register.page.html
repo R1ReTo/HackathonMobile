@@ -7,6 +7,17 @@
 <ion-content class="ion-padding">
   <form class="form" [formGroup]="userForm" (ngSubmit)="signUp(userForm.value)">
     <ion-item>
+      <ion-label position="floating">Nom</ion-label>
+      <ion-input type="text" formControlName="nom"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Prenom</ion-label>
+      <ion-input type="text" formControlName="prenom"></ion-input>
+    </ion-item>
+    
+
+    <ion-item>
       <ion-label position="floating">Email</ion-label>
       <ion-input type="text" formControlName="email"></ion-input>
     </ion-item>

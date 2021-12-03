@@ -23,7 +23,7 @@
         <ul>Date limite d'inscription : {{item.datelimite | date: 'dd/MM/yyyy'}}</ul>
         <ul>Nombre de places restante : {{item.nbplaces}}</ul>
         <ul>Date de fin : {{item.datefin | date: 'dd/MM/yyyy'}} à {{item.heurefin | date: 'hh:mm'}}</ul>
-        <ul><ion-button color="primary">S'inscrire au hackathon</ion-button></ul>
+        <ul><ion-button color="primary" (click)="MonClick(item)">S'inscrire au hackathon</ion-button></ul>
       </li>
     </ion-item>
   </ion-card>

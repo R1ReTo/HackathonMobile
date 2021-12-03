@@ -34,6 +34,14 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'listeatelier',
+    loadChildren: () => import('./listeatelier/listeatelier.module').then( m => m.ListeatelierPageModule)
+  },
+  {
+    path: 'detailatelier',
+    loadChildren: () => import('./detailatelier/detailatelier.module').then( m => m.DetailatelierPageModule)
   }
 ];
 

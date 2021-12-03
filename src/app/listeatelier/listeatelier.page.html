@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Liste des hackathons</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+   <ion-item *ngFor="let item of ListeAtelier" (click)="MonClick(item)">
+      <ion-card style="box-shadow: 1px 1px 10px black;background-color:#EEEEEE; text-align: center; border-radius: 25px;">
+        <br>
+        <ion-card-title style="font-family:Comic Sans MS; font-weight: bold;">{{item.libelle}}</ion-card-title><br>
+
+        <br><br>
+        <ion-item style=" font-family:Comic Sans MS;">
+          <li  style=" margin-left:5px;margin-right: 5px; margin-top:20px; margin-bottom: 20px; padding-right: 20px; border-radius: 20px; background-color:#EEEEEE;">
+          </li>
+        </ion-item>
+      </ion-card>
+    </ion-item>
+  </div>
+</ion-content>
