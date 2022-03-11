@@ -24,8 +24,15 @@ export class ListeatelierPage implements OnInit {
         });
       }
     });
+  }
 
-
+  makeDate(tdate){
+    console.log(tdate);
+    let dt = new Date(tdate).toLocaleDateString("en-GB")
+    let hr = new Date(tdate);
+    var minutes = hr.getMinutes() <10 ? "0"+hr.getMinutes() : hr.getMinutes();
+    var hour = hr.getHours() <10 ? "0"+hr.getHours() : hr.getHours();
+    return dt+" à "+hour+":"+minutes;
   }
 
   ngOnInit() {
@@ -40,5 +47,4 @@ export class ListeatelierPage implements OnInit {
     }
     this.router.navigate(['/detailatelier'], navigationExtras)
   }
-
 }

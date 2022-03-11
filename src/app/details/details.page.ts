@@ -40,4 +40,6 @@ export class DetailsPage implements OnInit {
     this.router.navigate(['/listeatelier'], navigationExtras)
   }
 
+  
+
 }

@@ -9,7 +9,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class DetailatelierPage implements OnInit {
   
-  item3 = ""
+  item3:any;
+  DetailAtelier:any;
 
 
   constructor(private router: Router, private activeRoute: ActivatedRoute, private http :HttpClient) {
@@ -17,11 +18,12 @@ export class DetailatelierPage implements OnInit {
       if (this.router.getCurrentNavigation().extras.state) {
         this.item3 =
           this.router.getCurrentNavigation().extras.state.param3;
+          
       }
     });
+    
   }
-
-
+  
 
 
 ngOnInit() {
